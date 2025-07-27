@@ -58,7 +58,7 @@ jobs:
       
     # 上传覆盖率报告
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v5
       with:
         file: ./frontend/coverage/lcov.info,./backend/coverage/lcov.info
         flags: frontend,backend
