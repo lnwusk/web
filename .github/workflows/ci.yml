@@ -21,7 +21,7 @@ jobs:
         cache: false
         
     - name: Cache frontend dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: frontend/node_modules
         key: ${{ runner.os }}-frontend-${{ hashFiles('frontend/package-lock.json') }}
@@ -41,7 +41,7 @@ jobs:
       run: npm run build
       
     - name: Cache backend dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: backend/node_modules
         key: ${{ runner.os }}-backend-${{ hashFiles('backend/package-lock.json') }}
